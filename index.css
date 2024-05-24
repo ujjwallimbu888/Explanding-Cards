@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e8e8e8;
+  overflow: hidden;
+}
+
+#explore_the_world {
+  background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+#wild_forest {
+  background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+}
+
+#sunny_beach {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+  background-size: cover;
+}
+
+#city_on_winter {
+  background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+  background-size: cover;
+}
+
+#mountains_clouds {
+  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+}
+
+.travels {
+  display: flex;
+  height: 80vh;
+  width: 90vw;
+  justify-content: space-around;
+}
+
+.scenarios {
+  border-radius: 26px;
+  cursor: pointer;
+  position: static;
+  width: 5.5vw;
+  transition: width 1s;
+}
+
+.inactive .description {
+  opacity: 0;
+}
+
+/* For the cards */
+.active {
+  width: 56vw;
+  /* animation-name: smooth;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out; */
+}
+
+/* @keyframes smooth {
+  from {
+    width: 5.5vw;
+  }
+  to {
+    width: 56vw;
+  }
+} */
+
+/* For the description */
+.active .description {
+  opacity: 1;
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  padding: 10px 20px;
+  font-size: large;
+  transition: 1.5s;
+  overflow: hidden;
+}
+
+/* For responsiveness */
+@media only screen and (max-width: 300px) {
+  .scenarios:nth-of-type(4) {
+    display: none;
+  }
+  .scenarios:nth-of-type(5) {
+    display: none;
+  }
+}
